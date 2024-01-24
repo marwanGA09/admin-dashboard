@@ -30,7 +30,6 @@ a:link {
 }
 
 .sidebar {
-  height: 100vh;
   grid-row: span 2;
   background-color: #4ade80;
   padding: 2rem 3rem;
@@ -93,9 +92,40 @@ a:link {
 }
 
 .main {
-  height: 140vh;
   overflow: auto;
-  background-color: #9333ea;
+  background-color: #918a98;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+.main .project-container {
+  background-color: cadetblue;
+  padding: 1rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-auto-rows: auto;
+  gap: 2.5rem 2rem;
+}
+.main .project-container .pc__card {
+  background-color: chocolate;
+  color: white;
+  height: 25rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.main .project-container .pc__card--icon {
+  align-self: end;
+  margin-top: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+.main .aside {
+  background-color: antiquewhite;
+  grid-row: span 2;
 }
 
 /*# sourceMappingURL=style.css.map */
