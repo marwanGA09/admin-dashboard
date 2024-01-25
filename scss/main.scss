@@ -37,23 +37,56 @@ a {
 p {
   color: $color-text-light;
 }
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: $color-text-icon;
+  margin-right: 1rem;
+}
+
+.dash .icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.remainder .icon,
+.pc__card--icon .icon,
+.search .icon {
+  fill: $color-text-dark;
+  margin-right: 0;
+}
+
+.avatar {
+  img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100rem;
+  }
+}
+
 // mixin
 @mixin profile() {
   .profile {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 0.3rem 2rem;
-
+    justify-content: start;
+    align-content: start;
     .avatar {
       grid-row: span 2;
-      background-color: $color-secondary;
       border-radius: 10px;
     }
     .user {
+      align-self: end;
       font-weight: bold;
       a {
         color: $color-text-dark;
       }
+    }
+
+    .align-end {
+      align-self: start;
     }
   }
 }
@@ -61,6 +94,8 @@ p {
 // styling
 
 .container {
+  // overflow: hidden;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: auto 1fr;
@@ -90,8 +125,7 @@ p {
   }
 }
 .header {
-  // // return back
-  // box-shadow: 5px 5px 5px 5px $color-shadow;
+  box-shadow: inset -2px 0 5px 0 $color-shadow;
   padding: 1.5rem 3rem;
 
   //   grid top and bottom;
@@ -112,6 +146,10 @@ p {
       padding: 0.8rem;
       height: 2rem;
       background-color: $color-bg;
+    }
+
+    .user {
+      font-weight: bold;
     }
   }
 
@@ -136,7 +174,7 @@ p {
 }
 .main {
   box-shadow: inset 7px 7px 10px 0px $color-shadow;
-  height: 86.1vh;
+  height: 100%;
   overflow-y: scroll;
   background-color: $color-bg;
   padding: 3rem 2rem;
@@ -207,7 +245,7 @@ p {
 
     .trending__table {
       padding: 1rem 2rem;
-      box-shadow: 0 0 2px 2px $color-shadow;
+      box-shadow: 0px 8px 7px 1px $color-shadow;
       background-color: white;
       display: flex;
       flex-direction: column;
