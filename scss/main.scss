@@ -50,8 +50,10 @@ p {
       border-radius: 10px;
     }
     .user {
-      color: $color-text-dark;
       font-weight: bold;
+      a {
+        color: $color-text-dark;
+      }
     }
   }
 }

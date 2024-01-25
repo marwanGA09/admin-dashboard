@@ -87,8 +87,10 @@ p {
   border-radius: 10px;
 }
 .header__bottom .profile .user {
-  color: #0a0a0a;
   font-weight: bold;
+}
+.header__bottom .profile .user a {
+  color: #0a0a0a;
 }
 .header__bottom .buttons {
   align-items: center;
@@ -181,8 +183,10 @@ p {
   border-radius: 10px;
 }
 .main .aside .trending__table .profile .user {
-  color: #0a0a0a;
   font-weight: bold;
+}
+.main .aside .trending__table .profile .user a {
+  color: #0a0a0a;
 }
 
 /*# sourceMappingURL=style.css.map */
