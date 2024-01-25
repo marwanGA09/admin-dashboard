@@ -6,6 +6,16 @@ $color-text-light: #404040;
 $color-text-icon: white;
 $color-shadow: #cacaca;
 // $color-shadow: red;
+
+// font
+$font-h-1: 2rem;
+$font-h-2: 1.7rem;
+$font-h-3: 1.6rem;
+$font-h-4: 1.5rem;
+
+$font-p-1: 1.8rem;
+$font-p-2: 1.6rem;
+
 :root {
   font-size: 62.5%;
 }
@@ -18,11 +28,38 @@ $color-shadow: #cacaca;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // color: $color-text-dark;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: $font-p-1;
+}
+
+// fontsize
+
+.sidebar h4,
+.user.align-end {
+  font-size: $font-h-1;
+  font-weight: bold;
+}
+
+.sidebar__main,
+.sidebar__sec,
+.header__top .user,
+.btn,
+.main h5 {
+  font-size: $font-h-2;
+}
+
+.announcement__table h6 {
+  font-size: $font-h-3;
+}
+
+.trending__table .user {
+  font-size: $font-h-4;
+}
+
+.announcement__table p {
+  font-size: $font-p-2;
 }
 
 ul {
@@ -146,6 +183,7 @@ p {
       padding: 0.8rem;
       height: 2rem;
       background-color: $color-bg;
+      border: none;
     }
 
     .user {
@@ -237,9 +275,9 @@ p {
       .col2 {
         padding-bottom: 2rem;
         border-bottom: 2px solid $color-secondary;
-        h6 {
-          font-size: 1.5rem;
-        }
+      }
+      h6 {
+        font-size: 1.5rem;
       }
     }
 

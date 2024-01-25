@@ -11,6 +11,32 @@
 }
 
 body {
+  font-size: 1.8rem;
+}
+
+.sidebar h4,
+.user.align-end {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sidebar__main,
+.sidebar__sec,
+.header__top .user,
+.btn,
+.main h5 {
+  font-size: 1.7rem;
+}
+
+.announcement__table h6 {
+  font-size: 1.6rem;
+}
+
+.trending__table .user {
+  font-size: 1.5rem;
+}
+
+.announcement__table p {
   font-size: 1.6rem;
 }
 
@@ -98,6 +124,7 @@ p {
   padding: 0.8rem;
   height: 2rem;
   background-color: #dfdfdf;
+  border: none;
 }
 .header__top .user {
   font-weight: bold;
@@ -195,8 +222,7 @@ p {
   padding-bottom: 2rem;
   border-bottom: 2px solid #a21caf;
 }
-.main .aside .announcement__table .col1 h6,
-.main .aside .announcement__table .col2 h6 {
+.main .aside .announcement__table h6 {
   font-size: 1.5rem;
 }
 .main .aside .trending__table {
