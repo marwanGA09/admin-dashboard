@@ -26,17 +26,32 @@ a:link {
   text-decoration: none;
 }
 
+// mixin
+@mixin profile() {
+  .profile {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.3rem 2rem;
+
+    .avatar {
+      grid-row: span 2;
+      background-color: #9333ea;
+      border-radius: 10px;
+    }
+  }
+}
+
 // styling
 
 .container {
   background-color: #57534e;
-
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: auto 1fr;
 }
+
 .sidebar {
-  //   height: 100vh;
+  height: 100vh;
   grid-row: span 2;
   background-color: #4ade80;
   padding: 2rem 3rem;
@@ -85,17 +100,7 @@ a:link {
     display: flex;
     justify-content: space-between;
 
-    .profile {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      gap: 0.3rem 2rem;
-
-      .avatar {
-        grid-row: span 2;
-        background-color: #9333ea;
-        border-radius: 10px;
-      }
-    }
+    @include profile();
 
     .buttons {
       align-items: center;
@@ -111,8 +116,8 @@ a:link {
   }
 }
 .main {
-  //   height: 80vh;
-  overflow: auto;
+  height: 80vh;
+  overflow-y: scroll;
   background-color: #918a98;
   padding: 3rem 2rem;
 
@@ -153,5 +158,41 @@ a:link {
   .aside {
     background-color: antiquewhite;
     grid-row: span 2;
+    height: max-content;
+
+    // grid
+    display: grid;
+    grid-template-rows: repeat(2, auto 1fr);
+    gap: 0.8rem;
+    align-content: start;
+    align-items: start;
+    gap: 1rem;
+
+    .announcement__table {
+      border: 2px solid saddlebrown;
+      padding: 0.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .col1,
+      .col2 {
+        padding-bottom: 2rem;
+        border-bottom: 2px solid red;
+        h6 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .trending__table {
+      padding: 0.5rem 2rem;
+      border: 2px solid saddlebrown;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include profile();
+    }
   }
 }
